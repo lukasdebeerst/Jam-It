@@ -1,0 +1,1996 @@
+/*
+COLORS
+
+Grey: #3A3A3A;
+light red: #FF605F;
+background red: #FE6868;
+
+*/
+@import url('css/reset.css');
+@import url('css/vars.css');
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('/assets/fonts/Rubik-Medium.woff2') format('woff2'),
+      url('/assets/fonts/Rubik-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('/assets/fonts/Rubik-Bold.woff2') format('woff2'),
+      url('/assets/fonts/Rubik-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('/assets/fonts/Rubik-Light.woff2') format('woff2'),
+      url('/assets/fonts/Rubik-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('/assets/fonts/Rubik-Black.woff2') format('woff2'),
+      url('/assets/fonts/Rubik-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('/assets/fonts/Rubik-Regular.woff2') format('woff2'),
+      url('/assets/fonts/Rubik-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: inherit;
+    line-height: 1.2;
+}
+
+body {
+    font-family: 'Rubik', Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    color: white;
+}
+
+.hidden{
+    display: none;
+}
+
+
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; /* added line */
+}
+
+/*--------------------------HEADER---------------------------------*/
+
+.header{
+  display: flex;
+  max-width: 106rem;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 2rem auto;
+}
+
+/*--------------------------NAVIGATIE---------------------------------*/
+
+.nav__list {
+    display: flex;
+}
+
+.nav-item-link {
+    color: var(--grey);
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: var(--medium);
+    line-height: 28px;
+    width: 5.5rem;
+    height: 5.5rem;
+    border: none;
+    text-decoration: none;
+    margin-left: 6rem;
+}
+
+.nav-item-link-create{
+  color: white;
+  background-color: var(--red);
+  border-radius: 5rem;
+  padding: 1rem 5rem;
+}
+
+.nav-item-link--mobile{
+  display: none;
+}
+
+/*--------------------------ACHTERGROND---------------------------------*/
+
+.container{
+    max-width: 106rem;
+    margin: 0 auto;
+    background: radial-gradient(191.85% 103.05% at 100% 94.29%, var(--orange) 0%, rgba(255, 255, 255, 0) 100%), var(--red);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 4.5rem 4.5rem 0 0;
+    padding: 4rem;
+    min-height: 88vh;
+}
+
+/*--------------------------EVENTS PAGINA---------------------------------*/
+
+.h1-like{
+    font-family: Rubik;
+    font-weight: 900;
+    font-size: var(--header);
+    line-height: 76px;
+    text-transform: uppercase;
+    color: var(--grey);
+    text-decoration: none;
+}
+
+.h2-like{
+  font-weight: bold;
+  font-size: var(--big);
+  margin-bottom: 3rem;
+}
+
+.h3-like{
+  font-weight: normal;
+  font-size: var(--medium);
+  color: white;
+}
+
+.form-filter{
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.filter-button{
+  width: 21.5rem;
+  font-size: var(--small);
+  text-transform: uppercase;
+  border: .4rem solid white;
+  border-radius: 5rem;
+  padding: .5rem 3rem;
+  background: var(--red);
+  color: white;
+  margin: 1rem 3rem 2rem 0;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.filter-button--confirm{
+  font-size: var(--small);
+  border-radius: 5rem;
+  padding: .5rem 3rem;
+  background: white;
+  color: var(--red);
+  border:none;
+  cursor: pointer;
+}
+
+.event__grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 5rem;
+  grid-gap: 2rem;
+}
+
+.grid-item{
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-end;
+  height: 43.5rem;
+  width: 28.5rem;
+  padding: 3rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/assets/images/guitar.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.grid-item-content{
+  font-size: var(--text);
+  font-weight: 300;
+}
+
+.grid-item-content p {
+  margin: 1rem 0;
+}
+
+.grid-item-content span{
+  font-weight: 500;
+}
+
+.item-title{
+  text-transform: uppercase;
+  font-size: var(--medium);
+  font-weight: bold;
+}
+
+/*--------------------------DETAIL PAGINA---------------------------------*/
+
+.detail__content{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.content-aside{
+  background-color: var(--red);
+  grid-column: 1;
+}
+
+.detail__title{
+  font-size: var(--medium);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.detail__data{
+  font-weight: bold;
+}
+
+/*-------------------------- CREATE PAGINA ---------------------------------*/
+
+.form__list--icons input::after{
+  cursor: pointer;
+  display: block;
+  width: 12rem; 
+  height: 12rem;
+  content:"";
+}
+
+.form__status{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  flex-flow: row wrap;
+}
+
+.form__status--default{
+  opacity: .5;
+  margin-right: 2rem;
+}
+
+.form__check{
+  opacity: 1;
+  font-weight: bold;
+}
+
+.form__part{
+  display: flex;
+}
+
+.form__part--name{
+  display: flex;
+  flex-flow: column;
+  margin: 2rem 0;
+  max-width: 35rem;
+  /* z-index: 5; */
+}
+
+.form__part--icons{
+  flex-flow: column;
+  margin: 1rem 0;
+}
+
+.form__part--per_age{
+  flex-flow: column;
+  margin: 11rem 0 5rem 0;
+}
+
+.form__input{
+  background: none;
+  border: none;
+  border-bottom: var(--grey) .5rem solid;
+  color: white;
+  font-size: var(--text);
+  margin-top: 2rem;
+  width: 25rem;
+  z-index: 523;
+}
+
+.form--level .form__input{
+  width: auto;
+}
+
+.form__input:focus{
+  border-bottom: white .5rem solid;
+}
+
+
+.form__input--box{
+  margin: 2rem 7rem;
+  background-color: var(--red);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.form__input--box:nth-child(1){
+  margin: 2rem 7rem 2rem 0;
+}
+
+.form__list--box {
+  color: var(--grey);
+  font-weight: bold;
+  list-style-type:none;
+  margin: 2.5rem 0 0 0;
+  padding:0;
+  display: flex;
+  flex-flow: row;
+}
+
+.form__list--box li {
+  margin: 0 2.5rem 0 0;
+  width: 10rem;
+  height: 4rem;
+  position: relative;
+}
+
+.form__list--box label, .form__list--age input {
+  display:flex;
+  position:absolute;
+  justify-content: center;
+  align-content: center;
+  padding: 1rem;
+  width: 10rem;
+}
+
+.form__list--box input[type="radio"] {
+ opacity:0;
+ z-index:100;
+}
+
+.form__list--box input[type="radio"]:checked + label {
+ background:var(--grey);
+ color: white;
+}
+
+.form__list--box label {
+  border:.5rem solid var(--grey); 
+  cursor:pointer;
+  z-index:90;
+}
+
+.form__list--box label:hover {
+  background:var(--grey);
+  color: white;
+}
+
+.form__list--icons {
+  color: #3A3A3A;
+  font-weight: bold;
+  list-style-type: none;
+  margin: 1.5rem 0 0 0;
+  display: flex;
+  flex-flow: row wrap;
+  width: 100rem;
+}
+
+.form__list--icons li {
+  margin: 0 6.5rem 0 0;
+  width: 10rem;
+  height: 5rem;
+  position: relative;
+}
+
+.form__list--icons label, .form__list--icons input {
+  position: absolute;
+  text-align: center;
+}
+
+.form__list--icons input[type="radio"] {
+ opacity:0;
+ z-index:100;
+}
+
+.form__list--icons input[type="checkbox"] {
+  opacity:0;
+  z-index:100;
+ }
+ 
+
+.form__input--gender--female[type="radio"]:checked + label::after {
+  background-image: url('assets/illustrations/female_active.png');
+  color: aliceblue;
+ }
+
+ .form__input--gender--intersex[type="radio"]:checked + label::after {
+  background-image: url('assets/illustrations/intersex_active.png');
+ }
+
+.form__input--gender--male[type="radio"]:checked + label::after {
+  background-image: url('assets/illustrations/male_active.png');
+ }
+
+.form__list--icons label::after {
+  background-color: var(--red);
+  border-radius: 2rem;
+  background-size: 6rem 9rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  width: 12rem; 
+  height: 12rem;
+  content:""; 
+  cursor:pointer;
+  z-index:90;
+}
+
+.form__input--gender--female + label::after {
+  background-image: url('assets/illustrations/female_inactive.png');
+}
+
+.form__input--gender--intersex + label::after {
+  background-image: url('assets/illustrations/intersex_inactive.png');
+  background-size: 6rem 9rem;
+}
+
+.form__input--gender--male + label::after {
+  background-image: url('assets/illustrations/male_inactive.png');
+  background-size: 9rem 9rem;
+}
+
+dd.form__input--gender--female::before {
+  background-image: url('assets/illustrations/female_active.png');
+  background-color: var(--red);
+  border-radius: 2rem;
+  background-size: 6rem 9rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  width: 12rem; 
+  height: 12rem;
+  content:"";
+  background-color: var(--red);
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+}
+
+dd.form__input--gender--female::after{
+  display: none;
+}
+
+dd.form__input--gender--intersex::before {
+  background-image: url('assets/illustrations/intersex_active.png');
+  background-color: var(--red);
+  border-radius: 2rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  width: 12rem; 
+  height: 12rem;
+  content:"";
+  background-size: 6rem 9rem;
+  background-color: var(--red);
+  border-radius: 2rem;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+
+}
+
+dd.form__input--gender--intersex::after{
+  display: none;
+}
+
+dd.form__input--gender--male::before {
+  background-image: url('assets/illustrations/male_active.png');
+  background-color: var(--red);
+  border-radius: 2rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  width: 12rem; 
+  height: 12rem;
+  content:"";
+  background-size: 9rem 9rem;
+  background-color: var(--red);
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+}
+
+dd.form__input--gender--male::after{
+  display: none;
+}
+
+/* .form__input--gender--female::after{
+  cursor: pointer;
+  display: block;
+  width: 12rem; 
+  height: 12rem;
+  content:"";
+}
+
+.form__input--gender--intersex::after{
+  cursor: pointer;
+  display: block;
+  width: 12rem; 
+  height: 12rem;
+  content:"";
+} */
+
+/* .form__input--gender--male::after{
+  cursor: pointer;
+  display: block;
+  width: 12rem; 
+  height: 12rem;
+  content:"";
+} */
+
+.form__input--genre--blues[type="radio"]:checked + label::after {
+  background-image: url('assets/illustrations/blues_active.png');
+ }
+
+.form__input--genre--blues + label::after {
+  background-image: url('assets/illustrations/blues_inactive.png');
+  background-size: 9rem 9rem;
+}
+
+/* .form__input--genre--blues::after{
+  cursor: pointer;
+  display: block;
+  width: 12rem; 
+  height: 12rem;
+  content:"";
+} */
+
+.form__input--genre--rock[type="radio"]:checked + label::after {
+  background-image: url('assets/illustrations/rock_active.png');
+ }
+
+.form__input--genre--rock + label::after {
+  background-image: url('assets/illustrations/rock_inactive.png');
+  background-size: 9rem 9rem;
+}
+
+/* .form__input--genre--rock::after{
+  cursor: pointer;
+  display: block;
+  width: 12rem; 
+  height: 12rem;
+  content:"";
+} */
+
+.form__input--genre--jazz[type="radio"]:checked + label::after {
+  background-image: url('assets/illustrations/jazz_active.png');
+ }
+
+.form__input--genre--jazz + label::after {
+  background-image: url('assets/illustrations/jazz_inactive.png');
+  background-size: 9rem 6rem;
+}
+
+/* .form__input--genre--jazz::after{
+  cursor: pointer;
+  display: block;
+  width: 12rem; 
+  height: 12rem;
+  content:"";
+} */
+
+.form__input--genre--classical[type="radio"]:checked + label::after {
+  background-image: url('assets/illustrations/classic_active.png');
+ }
+
+.form__input--genre--classical + label::after {
+  background-image: url('assets/illustrations/classic_inactive.png');
+  background-size: 9rem 9rem;
+}
+
+/* .form__input--genre--classical::after{
+  cursor: pointer;
+  display: block;
+  width: 12rem; 
+  height: 12rem;
+  content:"";
+} */
+
+.form__input--genre--reggae[type="radio"]:checked + label::after {
+  background-image: url('assets/illustrations/reggae_active.png');
+ }
+
+.form__input--genre--reggae + label::after {
+  background-image: url('assets/illustrations/reggae_inactive.png');
+  background-size: 7rem 9rem;
+}
+
+/* .form__input--genre--reggae::after{
+  cursor: pointer;
+  display: block;
+  width: 12rem; 
+  height: 12rem;
+  content:"";
+} */
+
+.form__input--genre--folk[type="radio"]:checked + label::after {
+  background-image: url('assets/illustrations/folk_active.png');
+ }
+
+.form__input--genre--folk + label::after {
+  background-image: url('assets/illustrations/folk_inactive.png');
+  background-size: 9rem 9rem;
+}
+
+/* .form__input--genre--folk::after{
+  cursor: pointer;
+  display: block;
+  width: 12rem; 
+  height: 12rem;
+  content:"";
+} */
+
+.form__list--per_age {
+  color: var(--grey);
+  font-weight: bold;
+  list-style-type:none;
+  margin: 2.5rem 0 0 0;
+  padding:0;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.form__list--per_age li {
+  margin: 0 2.5rem 0 0;
+  width: 10rem;
+  height: 4rem;
+  position: relative;
+}
+
+.form__list--per_age label, .form__list--per_age input {
+  display:flex;
+  position:absolute;
+  justify-content: center;
+  align-content: center;
+  padding: 1rem;
+  width: 10rem;
+}
+
+.form__list--per_age input[type="radio"] {
+ opacity:0;
+ z-index:100;
+}
+
+.form__list--per_age input[type="radio"]:checked + label {
+ background:var(--grey);
+ color: white;
+}
+
+
+.form__list--per_age label {
+  border:.5rem solid var(--grey); 
+  cursor:pointer;
+  z-index:90;
+}
+
+.form__list--per_age label:hover {
+  background:var(--grey);
+  color: white;
+}
+
+.form__list--age {
+  color: var(--grey);
+  font-weight: bold;
+  list-style-type:none;
+  margin: 2.5rem 0 0 0;
+  padding:0;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.form__list--age li {
+  margin: 0 2.5rem 0 0;
+  width: 10rem;
+  height: 4rem;
+  position: relative;
+}
+
+.form__list--age label, .form__list--age input {
+  display:flex;
+  position:absolute;
+  justify-content: center;
+  align-content: center;
+  padding: 1rem;
+  width: 10rem;
+}
+
+.form__list--age input[type="radio"] {
+ opacity:0;
+ z-index:100;
+}
+
+.form__list--age input[type="radio"]:checked + label {
+ background:var(--grey);
+ color: white;
+}
+
+
+.form__list--age label {
+  border:.5rem solid var(--grey); 
+  cursor:pointer;
+  z-index:90;
+}
+
+.form__list--age label:hover {
+  background:var(--grey);
+  color: white;
+}
+
+.form__part--level{
+  flex-flow: column;
+  margin-top: 12rem;
+}
+
+.form--level{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 2rem 0;
+}
+
+.form--level label{
+  text-align: center;
+}
+
+.form--level input{
+  grid-row: 2;
+  margin: 2rem auto;
+}
+
+.form__tab__button{
+  margin-top: 5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form__tab__button p{
+  margin-left: 5rem;
+  background: var(--red);
+  padding: 2rem 4rem;
+  border-radius: 3rem;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: var(--small);
+  cursor: pointer;
+}
+
+.form__tab__button p:hover{
+  background: var(--grey);
+}
+
+.form__tab__button p:nth-child(1){
+  background: var(--grey);
+}
+
+.form__label span{
+  font-size: var(--text);
+  font-style: italic;
+}
+
+.form__part--instr{
+  margin-bottom: 12rem;
+}
+
+.form__input--instr--guitar[type="radio"]:checked + label::after {
+  background-image: url('assets/illustrations/guitar_active.png');
+ }
+
+ .form__input--instr--guitar[type="checkbox"]:checked + label::after {
+  background-image: url('assets/illustrations/guitar_active.png');
+ }
+
+ .form__input--instr--guitar + label::after {
+  background-image: url('assets/illustrations/guitar_inactive.png');
+  background-size: 9rem 9rem;
+}
+
+/* .form__input--instr--guitar::after{
+  cursor: pointer;
+  display: block;
+  width: 12rem; 
+  height: 12rem;
+  content:"";
+} */
+
+.form__input--instr--bass[type="radio"]:checked + label::after {
+  background-image: url('assets/illustrations/bass_active.png');
+ }
+
+ .form__input--instr--bass[type="checkbox"]:checked + label::after {
+  background-image: url('assets/illustrations/bass_active.png');
+ }
+
+ .form__input--instr--bass + label::after {
+  background-image: url('assets/illustrations/bass_inactive.png');
+  background-size: 9rem 9rem;
+}
+
+/* .form__input--instr--bass::after{
+  cursor: pointer;
+  display: block;
+  width: 12rem; 
+  height: 12rem;
+  content:"";
+} */
+
+.form__input--instr--drum[type="radio"]:checked + label::after {
+  background-image: url('assets/illustrations/drum_active.png');
+ }
+
+ .form__input--instr--drum[type="checkbox"]:checked + label::after {
+  background-image: url('assets/illustrations/drum_active.png');
+ }
+
+ .form__input--instr--drum + label::after {
+  background-image: url('assets/illustrations/drum_inactive.png');
+  background-size: 9rem 9rem;
+}
+
+/* .form__input--instr--drum::after{
+  cursor: pointer;
+  display: block;
+  width: 12rem; 
+  height: 12rem;
+  content:"";
+} */
+
+.form__input--instr--piano[type="radio"]:checked + label::after {
+  background-image: url('assets/illustrations/piano_active.png');
+ }
+
+ .form__input--instr--piano[type="checkbox"]:checked + label::after {
+  background-image: url('assets/illustrations/piano_active.png');
+ }
+
+ .form__input--instr--piano + label::after {
+  background-image: url('assets/illustrations/piano_inactive.png');
+  background-size: 9rem 9rem;
+}
+
+/* .form__input--instr--piano::after{
+  cursor: pointer;
+  display: block;
+  width: 12rem; 
+  height: 12rem;
+  content:"";
+} */
+
+.form__input--instr--vocals[type="radio"]:checked + label::after {
+  background-image: url('assets/illustrations/vocals_active.png');
+ }
+
+ .form__input--instr--vocals[type="checkbox"]:checked + label::after {
+  background-image: url('assets/illustrations/vocals_active.png');
+ }
+
+ .form__input--instr--vocals + label::after {
+  background-image: url('assets/illustrations/vocals_inactive.png');
+  background-size: 9rem 9rem;
+}
+
+/* .form__input--instr--vocals::after{
+  cursor: pointer;
+  display: block;
+  width: 12rem; 
+  height: 12rem;
+  content:"";
+} */
+
+.form__input--instr--saxophone[type="radio"]:checked + label::after {
+  background-image: url('assets/illustrations/saxophone_active.png');
+ }
+
+ .form__input--instr--saxophone[type="checkbox"]:checked + label::after {
+  background-image: url('assets/illustrations/saxophone_active.png');
+ }
+
+ .form__input--instr--saxophone + label::after {
+  background-image: url('assets/illustrations/saxophone_inactive.png');
+  background-size: 6rem 9rem;
+}
+
+/* .form__input--instr--saxophone::after{
+  cursor: pointer;
+  display: block;
+  width: 12rem; 
+  height: 12rem;
+  content:"";
+} */
+
+/* .form__part--instr{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  margin-top: 2rem;
+}
+
+.form__part--instr label{
+  text-align: center;
+}
+
+.form__part--instr input{
+  grid-row: 2;
+  margin: 2rem;
+} */
+
+.form__input--event_guitar::after{
+  background-image: url('assets/illustrations/guitar_inactive.png');
+  background-color: #FF4E4E;
+  border-radius: 2rem;
+  background-size: 8rem 9rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  width: 12rem; 
+  height: 12rem;
+  content:"";
+}
+
+.form__input--event_guitar:checked::after{
+  background-image: url('assets/illustrations/guitar_active.png');
+  background-size: 8rem 9rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  width: 12rem; 
+  height: 12rem;
+  content:"";
+}
+
+.form__input--event_bass::after{
+  background-image: url('assets/illustrations/bass_inactive.png');
+  background-color: #FF4E4E;
+  border-radius: 2rem;
+  background-size: 9rem 9rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  width: 12rem; 
+  height: 12rem;
+  content:"";
+}
+
+.form__input--event_bass:checked::after{
+  background-image: url('assets/illustrations/bass_active.png');
+  background-size: 9rem 9rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  width: 12rem; 
+  height: 12rem;
+  content:"";
+}
+
+.form__input--event_drum::after{
+  background-image: url('assets/illustrations/drum_inactive.png');
+  background-color: #FF4E4E;
+  border-radius: 2rem;
+  background-size: 8rem 9rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  width: 12rem; 
+  height: 12rem;
+  content:"";
+}
+
+.form__input--event_drum:checked:after{
+  background-image: url('assets/illustrations/drum_active.png');
+  background-size: 8rem 9rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  width: 12rem; 
+  height: 12rem;
+  content:"";
+}
+
+.form__input--event_piano::after{
+  background-image: url('assets/illustrations/piano_inactive.png');
+  background-color: #FF4E4E;
+  border-radius: 2rem;
+  background-size: 8rem 9rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  width: 12rem; 
+  height: 12rem;
+  content:"";
+}
+
+.form__input--event_piano:checked:after{
+  background-image: url('assets/illustrations/piano_active.png');
+  background-size: 8rem 9rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  width: 12rem; 
+  height: 12rem;
+  content:"";
+}
+
+.form__input--event_vocals::after{
+  background-image: url('assets/illustrations/vocals_inactive.png');
+  background-color: #FF4E4E;
+  border-radius: 2rem;
+  background-size: 8rem 9rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  width: 12rem; 
+  height: 12rem;
+  content:"";
+}
+
+.form__input--event_vocals:checked:after{
+  background-image: url('assets/illustrations/vocals_active.png');
+  background-size: 8rem 9rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  width: 12rem; 
+  height: 12rem;
+  content:"";
+}
+
+.form__input--event_sax::after{
+  background-image: url('assets/illustrations/saxophone_inactive.png');
+  background-color: #FF4E4E;
+  border-radius: 2rem;
+  background-size: 8rem 9rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  width: 12rem; 
+  height: 12rem;
+  content:"";
+}
+
+.form__input--event_sax:checked:after{
+  background-image: url('assets/illustrations/saxophone_active.png');
+  background-size: 8rem 9rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  width: 12rem; 
+  height: 12rem;
+  content:"";
+}
+
+/* .form__part--instr{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  margin-top: 2rem;
+  margin-bottom: 12rem;
+}
+
+.form__part--instr label{
+  text-align: center;
+}
+
+.form__part--instr input{
+  grid-row: 2;
+  margin: 2rem;
+} */
+
+
+.form__part--cat{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  margin-top: 2rem;
+  margin-bottom: 12rem;
+}
+
+.form__part--cat label{
+  text-align: center;
+}
+
+.form__part--cat input{
+  grid-row: 2;
+  margin: 2rem;
+}
+
+.form__input--cat_rehearsel[type="radio"]:checked + label::after {
+  background-image: url('assets/illustrations/rehearsel_active.png');
+ }
+
+.form__input--cat_rehearsel + label::after {
+  background-image: url('assets/illustrations/rehearsel_inactive.png');
+  background-size: 7rem 9rem;
+}
+
+/* .form__input--cat_rehearsel::after{
+  cursor: pointer;
+  display: block;
+  width: 12rem; 
+  height: 12rem;
+  content:"";
+} */
+
+.form__input--cat_pub[type="radio"]:checked + label::after {
+  background-image: url('assets/illustrations/pub_active.png');
+ }
+
+ .form__input--cat_pub[type="checkbox"]:checked + label::after {
+  background-image: url('assets/illustrations/pub_active.png');
+ }
+
+.form__input--cat_pub + label::after {
+  background-image: url('assets/illustrations/pub_inactive.png');
+  background-size: 9rem 9rem;
+}
+
+/* .form__input--cat_pub::after{
+  cursor: pointer;
+  display: block;
+  width: 12rem; 
+  height: 12rem;
+  content:"";
+} */
+
+.form__input--cat_public[type="radio"]:checked + label::after {
+  background-image: url('assets/illustrations/public_active.png');
+ }
+
+.form__input--cat_public + label::after {
+  background-image: url('assets/illustrations/public_inactive.png');
+  background-size: 9rem 7rem;
+}
+
+/* .form__input--cat_public::after{
+  cursor: pointer;
+  display: block;
+  width: 12rem; 
+  height: 12rem;
+  content:"";
+} */
+
+.form__input--cat_private[type="radio"]:checked + label::after {
+  background-image: url('assets/illustrations/private_active.png');
+ }
+
+.form__input--cat_private + label::after {
+  background-image: url('assets/illustrations/private_inactive.png');
+  background-size: 9rem 7rem;
+}
+
+/* .form__input--cat_private::after{
+  cursor: pointer;
+  display: block;
+  width: 12rem; 
+  height: 12rem;
+  content:"";
+} */
+
+.form__part--loc{
+  margin-bottom: 12rem;
+}
+
+.form__distance{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 40rem;
+  border: none;
+}
+
+.form__input--distance:focus{
+  border:none;
+}
+
+input[type="range"]{
+  -webkit-appearance: none;
+  width: 35rem;
+  height: 1.5rem;
+  background-color: var(--grey);
+  border-radius: 5rem;
+  margin-bottom: 2rem;
+  margin-right: 2rem;
+} 
+  
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--red);
+  border-radius: 50rem;
+}
+
+input[type="range"]:hover{
+  background-color: white;
+  border:none
+}
+
+input[type="range"]:focus{
+  background-color: white;
+}
+
+#distance__output{
+  margin-right: .5rem;
+}
+
+/*-------------------------- WHEN CREATE PAGINA ---------------------------------*/
+
+.form__when input{
+  font-size: var(--small);
+  max-width: 15rem;
+}
+
+.label__date{
+  display: flex;
+  flex-flow: column;
+  max-width: 15rem;
+}
+
+.form__time{
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 55rem;
+}
+
+.label__time{
+  display: flex;
+  flex-flow: column;
+}
+
+/*-------------------- SUPPLIES CREATE --------------------------*/
+
+/* .form__input--sup--soundsys[type="checkbox"]:checked + label::after {
+  background-image: url('assets/illustrations/sound_active.png');
+ }
+
+ .form__input--sup--soundsys + label::after {
+  background-image: url('assets/illustrations/sound_inactive.png');
+  background-size: 9rem 5rem;
+} */
+
+.form__input--sup--soundsys[type="checkbox"]:checked + label::after {
+  background-image: url('assets/illustrations/sound_active.png');
+ }
+
+ .form__input--sup--soundsys + label::after {
+  background-image: url('assets/illustrations/sound_inactive.png');
+  background-size: 9rem 5rem;
+}
+
+.form__input--sup--g_amp[type="checkbox"]:checked + label::after {
+  background-image: url('assets/illustrations/guitar-amp_active.png');
+ }
+
+ .form__input--sup--g_amp + label::after {
+  background-image: url('assets/illustrations/guitar-amp_inactive.png');
+  background-size: 9rem 6rem;
+}
+
+.form__input--sup--b_amp[type="checkbox"]:checked + label::after {
+  background-image: url('assets/illustrations/bass-amp_active.png');
+ }
+
+ .form__input--sup--b_amp + label::after {
+  background-image: url('assets/illustrations/bass-amp_inactive.png');
+  background-size: 9rem 9rem;
+}
+
+.form__input--sup--key[type="checkbox"]:checked + label::after {
+  background-image: url('assets/illustrations/keyboard_active.png');
+ }
+
+ .form__input--sup--key + label::after {
+  background-image: url('assets/illustrations/keyboard_inactive.png');
+  background-size: 9rem 7rem;
+}
+
+.form__part--extra{
+  display: flex;
+  flex-flow: column;
+}
+
+.input__extra{
+  margin-top: 2rem;
+  background: none;
+  border: none;
+  border-bottom: .5rem solid var(--grey);
+  width: 30rem;
+  max-width: 50rem;
+  /* background: var(--red);
+  border-radius: 1rem; */
+  padding: 2rem;
+  height: 4rem;
+  transition: all .5s;
+}
+
+.input__extra:focus{
+  height: 20rem;
+  border-radius: 2rem;
+  border: .5rem solid var(--grey);
+}
+
+/* .form__input--sup--soundsys::after{
+  cursor: pointer;
+  display: block;
+  width: 12rem; 
+  height: 12rem;
+  content:"";
+} */
+  
+.error{
+  color: darkred;
+  font-weight: bold;
+}
+
+/* --------------------------- DETAIL ----------------------------- */
+
+.detail__title{
+  font-size: var(--big);
+  text-align: center;
+  margin: 2rem 0 5rem 0;
+}
+
+.detail__part{
+  margin-bottom: 5rem;
+}
+
+.detail__header{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.detail__header .h2-like{
+  margin: 0;
+}
+
+.edit__button{
+  text-decoration: none;
+  color: var(--grey);
+  padding: 1rem 2rem;
+  font-weight: 700;
+  border: .5rem solid var(--grey);
+  display: block;
+  width: 10rem;
+  text-align: center;
+}
+
+.edit__button:hover{
+  background-color: var(--grey);
+  color: white;
+}
+
+.detail__info{
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column wrap;
+  max-height: 5rem;
+}
+
+.info__title{
+  font-size: var(--medium);
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.detail__instr{
+  display: flex;
+  flex-flow: wrap;
+}
+
+.detail__instr li{
+  width: 12rem;
+  height: 12rem;
+  background-color: var(--red);
+  display: block;
+  border-radius: 2rem;
+  text-align: center;
+  margin-right: 3rem;
+}
+
+.detail__instr--guitar::before{
+  content: "";
+  background-image: url('/assets/illustrations/guitar_active.png');
+  width: 12rem;
+  height: 12rem;
+  background-size: 9rem 9rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  margin: 0 auto;
+  background-color: var(--red);
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+}
+
+.detail__instr--bass::before{
+  content: "";
+  background-image: url('/assets/illustrations/bass_active.png');
+  width: 12rem;
+  height: 12rem;
+  background-size: 9rem 9rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  margin: 0 auto;
+  background-color: var(--red);
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+}
+
+.detail__instr--drum::before{
+  content: "";
+  background-image: url('/assets/illustrations/drum_active.png');
+  width: 12rem;
+  height: 12rem;
+  background-size: 8rem 8rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  margin: 0 auto;
+  background-color: var(--red);
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+}
+
+.detail__instr--piano::before{
+  content: "";
+  background-image: url('/assets/illustrations/piano_active.png');
+  width: 12rem;
+  height: 12rem;
+  background-size: 9rem 9rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  margin: 0 auto;
+  background-color: var(--red);
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+}
+
+.detail__instr--vocals::before{
+  content: "";
+  background-image: url('/assets/illustrations/vocals_active.png');
+  width: 12rem;
+  height: 12rem;
+  background-size: 9rem 9rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  margin: 0 auto;
+  background-color: var(--red);
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+}
+
+.detail__instr--sax::before{
+  content: "";
+  background-image: url('/assets/illustrations/saxophone_active.png');
+  width: 12rem;
+  height: 12rem;
+  background-size: 6rem 9rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  margin: 0 auto;
+  background-color: var(--red);
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+}
+
+.detail__loc{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.loc__detail .detail__info{
+  max-height: none;
+}
+
+.loc__detail .detail__info .info__title{
+  margin-top: 4rem;
+}
+
+.detail__sup--soundsys::before{
+  content: "";
+  background-image: url('/assets/illustrations/sound_active.png');
+  width: 12rem;
+  height: 12rem;
+  background-size: 9rem 5rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  background-color: var(--red);
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+}
+
+.detail__sup--drum::before{
+  content: "";
+  background-image: url('/assets/illustrations/drum_active.png');
+  width: 12rem;
+  height: 12rem;
+  background-size: 9rem 9rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  background-color: var(--red);
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+}
+
+.detail__sup--guitar-amp::before{
+  content: "";
+  background-image: url('/assets/illustrations/guitar-amp_active.png');
+  width: 12rem;
+  height: 12rem;
+  background-size: 9rem 6rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  background-color: var(--red);
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+}
+
+.detail__sup--bass-amp::before{
+  content: "";
+  background-image: url('/assets/illustrations/bass-amp_active.png');
+  width: 12rem;
+  height: 12rem;
+  background-size: 9rem 9rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  background-color: var(--red);
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+}
+
+.detail__sup--key::before{
+  content: "";
+  background-image: url('/assets/illustrations/keyboard_active.png');
+  width: 12rem;
+  height: 12rem;
+  background-size: 9rem 6rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  background-color: var(--red);
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+}
+
+.detail__sup--snacks::before{
+  content: "";
+  background-image: url('/assets/illustrations/pub_active.png');
+  width: 12rem;
+  height: 12rem;
+  background-size: 9rem 9rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  background-color: var(--red);
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* .detail__creator{
+  display: grid;
+  grid-template-columns: repeat(4, 12rem);
+  text-align: center;
+  grid-gap: 1rem 3rem;
+}
+
+.detail__creator dd{
+  grid-row: 2;
+  text-align: center;
+} */
+
+dl.detail__instr{
+  text-align: center;
+  display: flex;
+  flex-flow: column wrap;
+  max-height: 16rem;
+}
+
+.detail__instr dd::before{
+  margin: 0 auto;
+}
+
+.detail__per--name::before{
+  content: "";
+  background-image: url('/assets/illustrations/name.png');
+  width: 12rem;
+  height: 12rem;
+  background-size: 8rem 9rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  background-color: var(--red);
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+}
+
+.detail__per--age::before{
+  content: "";
+  background-image: url('/assets/illustrations/age.png');
+  width: 12rem;
+  height: 12rem;
+  background-size: 8rem 9rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  background-color: var(--red);
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+}
+
+.delete__text{
+  margin-bottom: 2rem;
+}
+
+.form__submit{
+  padding: 2rem;
+  border: none;
+  background: none;
+  color: white;
+  font-size: var(--small);
+  font-weight: bold;
+  margin-left: 5rem;
+  background: var(--red);
+  padding: 2rem 4rem;
+  border-radius: 3rem;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: var(--small);
+  cursor: pointer;
+}
+
+
+.form__submit--edit{
+  margin-top: 5rem;
+  margin-left: 0;
+}
+
+.form__tab__button p:hover{
+  background: var(--grey);
+}
+
+.form__tab__button p:nth-child(1){
+  background: var(--grey);
+}
+
+.has-js .filter-button--confirm{
+  display: none;
+}
+
+
+
+.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;border-radius:2rem}
+
+@media only screen and (max-width: 1045px) {
+  .header{
+    max-width: 100rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .filter__form{
+    display: flex;
+  }
+
+  .form__list--icons{
+    width: auto;
+    margin-top: -8.5rem;
+  }
+
+  .form__list--icons li{
+    margin-top: 10rem;
+    margin-right: 5rem;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  /* home */
+  .event__grid{
+    grid-template-columns: repeat(2, 1fr);
+    margin: 5rem auto;
+  }
+
+  .grid-item{
+    width: 40rem;
+    height: 50rem;
+  }
+
+  /* detail */
+  .loc__detail{
+    padding: 2rem;
+  }
+
+  .detail__instr li{
+    margin-top: 3rem;
+  }
+
+  .form__list--icons li{
+    margin-right: 4rem;
+  }
+
+}
+
+@media only screen and (max-width: 895px){
+  /* home */
+  .grid-item{
+    width: 35rem;
+  }
+
+  /* detail */
+  .detail__loc{
+    display: block;
+  }
+
+  .loc__detail .detail__info{
+    max-height: 15rem;
+  }
+
+  /* create */
+  .form__status{
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+  }
+
+  .form__status li{
+    margin-bottom: 1rem;
+  }
+  .form__list--per_age{
+    margin-top: 0;
+  }
+  
+  .form__list--per_age li{
+    margin-top: 2.5rem;
+  }
+  
+  .form__list--age{
+    margin-top: 0;
+  }
+  
+  .form__list--age li{
+    margin-top: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 795px){
+  /* home */
+  .grid-item{
+    width: 30rem;
+    height: 40rem;
+  }
+
+  .filter__form{
+    overflow: scroll;
+  }
+
+/* create */
+
+}
+
+@media only screen and (max-width: 700px){
+  .container{
+    min-height: 90vh;
+  }
+
+  .header{
+    margin: 2rem 3rem;
+    align-items: center;
+  }
+
+  .h2-like{
+    font-size: var(--medium);
+    margin-bottom: 1.5rem;
+  }
+
+  .h3-like{
+    font-size: var(--small);
+  }
+
+  .nav-item-link-events{
+    display: none;
+  }
+
+  .event__grid{
+    display: flex;
+    overflow: scroll;
+  }
+
+  .nav-item-link{
+    margin: 0;
+  }
+
+  .grid-item{
+    width: 40rem;
+    height: 60rem;
+    margin-right: 3rem;
+  }
+
+  .grid-item-content{
+    width: 40rem;
+    font-size: var(--small);
+  }
+
+  .item-title{
+    font-size: var(--big);
+  }
+
+  .mapouter{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+  }
+
+  .mapouter iframe{
+      left:0;
+      top:0;
+      height:100%;
+      width:100%;
+      position:absolute;
+      border-radius: 2rem;
+  }
+
+  dl.detail__instr{
+    max-height: 39rem;
+  }
+  
+  .detail__instr dd::before{
+    margin: 1rem auto;
+  }
+
+  .detail__instr dd{
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 585px){
+  .h1-like{
+    font-size: var(--big);
+  }
+
+  .grid-item{
+    width: 35rem;
+    height: 50rem;
+  }
+
+  .nav-item-link-create{
+    padding: 1rem 2rem;
+  }
+
+  .form__part{
+    max-width: 40rem;
+  }
+
+  .form__list--icons{
+    justify-content: center;
+  }
+
+  .form__list--icons li:last-child{
+    margin-top: 10rem;
+  }
+
+  .form__distance{
+    max-width: 30rem;
+  }
+}
+
+@media only screen and (max-width:415px){
+
+
+  .grid-item{
+    width: 40rem;
+    height: 60rem;
+    margin-right: 3rem;
+  }
+
+  .grid-item-content{
+    width: 40rem;
+    font-size: var(--small);
+  }
+
+  .item-title{
+    font-size: var(--medium);
+  }
+
+  .form__time{
+    display: flex;
+    flex-flow: column;
+  }
+
+  .label__time:last-of-type{
+    margin-top: 3rem;
+  }
+
+  .nav-item-link--desktop{
+    display: none;
+  }
+
+  .nav-item-link--mobile{
+    display: flex;
+    width: 7rem;
+    height: 7rem;
+    background-color: var(--red);
+    justify-content: center;
+    align-items: center;
+    border-radius: 5rem;
+  }
+}
+
+
+@media only screen and (max-width: 375px) {
+  .nav-item-link-create{
+    font-size: var(--small);
+  }
+
+  .event__grid{
+    margin-top: 1rem;
+  }
+
+  .grid-item{
+    width: 25rem;
+    height: 45rem;
+    margin-right: 3rem;
+  }
+
+  .grid-item-content{
+    width: 20rem;
+    font-size: var(--small);
+  }
+
+  .item-title{
+    font-size: var(--medium);
+  }
+
+  .loc__detail{
+    padding: 0;
+  }
+
+  .detail__instr{
+    width: 33rem;
+    margin-bottom: 10rem;
+  }
+
+  .detail__instr li:nth-child(1){
+    margin-top: 0;
+  }
+  .detail__instr li:nth-child(2){
+    margin-top: 0;
+  }
+
+  dl.detail__instr{
+    width: 30rem;
+    margin-bottom: 5rem;
+  }
+
+  .detail__instr li{
+    margin-right: 4rem;
+  }
+}
