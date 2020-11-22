@@ -15,4 +15,3 @@ Jammit is een site/app waar men jam evenementen kan aanmaken. Voor elke jam word
     - hoe lang
     - niveau
     - leeftijdscategorie
-# Jam-It
